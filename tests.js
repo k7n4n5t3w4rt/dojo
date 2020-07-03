@@ -1,0 +1,3 @@
+Test("First test", () => {
+  anagrams();
+});
