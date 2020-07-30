@@ -1,3 +1,4 @@
+// @flow
 function pass(message) {
   console.log(message);
 }

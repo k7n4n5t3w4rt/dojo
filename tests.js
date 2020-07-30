@@ -1,3 +1,10 @@
+// @flow
 Test("First test", () => {
-  anagrams();
+  const result /*: boolean */ = exampleFunction();
+
+  if (result === true) {
+    pass(`The result is ${result.toString()}`);
+  } else {
+    fail(`The result is ${result.toString()}`);
+  }
 });
