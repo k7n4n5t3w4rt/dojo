@@ -1,4 +1,4 @@
 // @flow
-const exampleFunction = () /*: boolean */ => {
-  return true;
+const balanced = (testString /*: string */) /*: boolean */ => {
+  return false;
 };

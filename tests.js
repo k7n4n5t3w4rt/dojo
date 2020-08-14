@@ -1,10 +1,15 @@
 // @flow
 Test("First test", () => {
-  const result /*: boolean */ = exampleFunction();
+  const testString /*: string */ = "{{)(}}";
+  const result /*: boolean */ = balanced(testString);
 
   if (result === true) {
-    pass(`The result is ${result.toString()}`);
+    pass(
+      `The parentheses are balanced because the result is ${result.toString()}`
+    );
   } else {
-    fail(`The result is ${result.toString()}`);
+    fail(
+      `The parentheses are NOT balanced because the result is ${result.toString()}`
+    );
   }
 });

@@ -13,3 +13,58 @@ For example:
 {}([]) is balanced
 
 {()}[[{}]] is balanced
+
+## The Plan. Well, a plan.
+
+The principle I have in mind is that a structural solution is more likely to get a result than a procedural solution.
+So, rather than thinking in terms of doing things with strings, I'm going to try thinking in terms of structures.
+
+In this case, I see a tree structure inherent in the idea of "balanced" parentheses. So this string:
+
+[({})]
+
+...is a tree:
+
+    						[]
+    						()
+    						{}
+
+This one:
+
+{}([])
+
+...is also a tree, but it has two root nodes:
+
+    						{}							()
+    															[]
+
+{()}[[{}]] is also a tree with two root nodes:
+
+    							{}							[]
+    							()							[]
+    															{}
+
+We're going to have a top-level function that accepts a string and returns a `true` or `false`.
+A tree structure lends itself to recursion.
+
+Steps:
+
+{}([])
+
+```
+[
+	{
+		type: "curly",
+		children: []
+	},
+	{
+		type: "round",
+		children: [
+			{
+				type: "square",
+				children: []
+			}
+		]
+	}
+]
+```
