@@ -1,7 +1,9 @@
 // @flow
 // Leave this one. It won't work until the end
 Test("First and final test", () => {
-	const testString /*: string */ = "{()}[[{}]]"
+  const testString /*: string */ = "{()}[[{}]]";
+
+  // $FlowFixMe
   const result /*: boolean */ = isBalanced(testString);
 
   if (result === true) {
