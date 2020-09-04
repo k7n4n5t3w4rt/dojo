@@ -7,21 +7,23 @@ You start with a two dimensional grid of cells, where each cell is either alive 
 3. Any live cell with two or three live neighbours lives on to the next generation.
 4. Any dead cell with exactly three live neighbours becomes a live cell.
 
-- indicates live cell
-  . indicates dead cell
+```
+* indicates live cell
+. indicates dead cell
 
 Example input:
 5 8
 ........
 ...**...
-.\*\*\***..
+.*****..
 ........
 ........
 
 Example output:
 5 8
 ........
-....._..
-.._..\*..
-..\*\*\*...
 ........
+.....*..
+..***...
+........
+```
