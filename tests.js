@@ -24,7 +24,7 @@ Test("First test", () => {
 });
 
 Test("First alive or dead", () => {
-const oldState /*: Array<Array<string>> */ = [
+  const oldState /*: Array<Array<string>> */ = [
     [".", ".", ".", ".", ".", ".", ".", "."],
     [".", ".", ".", ".", "*", ".", ".", "."],
     [".", ".", ".", "*", "*", ".", ".", "."],
@@ -33,6 +33,7 @@ const oldState /*: Array<Array<string>> */ = [
 
   const x = 5;
   const y = 1;
+  // $FlowFixMe
   const alive = aliveOrDead(oldState, x, y);
 
   if (alive) {
@@ -40,5 +41,4 @@ const oldState /*: Array<Array<string>> */ = [
   } else {
     fail(`Fail: The result is ${alive.toString()}`);
   }
-
 });
