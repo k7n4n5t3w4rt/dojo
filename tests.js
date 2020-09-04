@@ -24,14 +24,21 @@ Test("First test", () => {
 });
 
 Test("First alive or dead", () => {
+const oldState /*: Array<Array<string>> */ = [
+    [".", ".", ".", ".", ".", ".", ".", "."],
+    [".", ".", ".", ".", "*", ".", ".", "."],
+    [".", ".", ".", "*", "*", ".", ".", "."],
+    [".", ".", ".", ".", ".", "*", ".", "."],
+  ];
+
   const x = 5;
   const y = 1;
   const alive = aliveOrDead(oldState, x, y);
 
   if (alive) {
-    pass(`Pass: The result is ${returnState.toString()}`);
+    pass(`Pass: The result is ${alive.toString()}`);
   } else {
-    fail(`Fail: The result is ${returnState.toString()}`);
+    fail(`Fail: The result is ${alive.toString()}`);
   }
 
 });
