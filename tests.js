@@ -31,14 +31,36 @@ Test("First alive or dead", () => {
     [".", ".", ".", ".", ".", "*", ".", "."],
   ];
 
-  const x = 5;
+  const x = 3;
   const y = 1;
   // $FlowFixMe
   const alive = aliveOrDead(oldState, x, y);
 
+  console.log('alive', alive);
   if (alive) {
     pass(`Pass: The result is ${alive.toString()}`);
   } else {
     fail(`Fail: The result is ${alive.toString()}`);
+  }
+});
+
+Test("Search first cell and return dead", () => {
+  const oldState /*: Array<Array<string>> */ = [
+    [".", ".", ".", ".", ".", ".", ".", "."],
+    [".", ".", ".", ".", "*", ".", ".", "."],
+    [".", ".", ".", "*", "*", ".", ".", "."],
+    [".", ".", ".", ".", ".", "*", ".", "."],
+  ];
+
+  const x = 0;
+  const y = 0;
+  // $FlowFixMe
+  const alive = aliveOrDead(oldState, x, y);
+
+  console.log("alive", alive);
+  if (alive) {
+    fail(`Fail: The result is ${alive.toString()}`);
+  } else {
+    pass(`Pass: The result is ${alive.toString()}`);
   }
 });
