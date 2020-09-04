@@ -14,11 +14,24 @@ Test("First test", () => {
     [".", ".", ".", ".", "*", ".", ".", "."],
   ];
   // $FlowFixMe
-  const newState /*: Array<Array<string>> */ = newState(input);
+  const returnState /*: Array<Array<string>> */ = newState(input);
 
-  if (JSON.stringify(newState) === JSON.stringify(expectedOutput)) {
-    pass(`The result is ${newState.toString()}`);
+  if (JSON.stringify(returnState) === JSON.stringify(expectedOutput)) {
+    pass(`Pass: The result is ${returnState.toString()}`);
   } else {
-    fail(`The result is ${newState.toString()}`);
+    fail(`Fail: The result is ${returnState.toString()}`);
   }
+});
+
+Test("First alive or dead", () => {
+  const x = 5;
+  const y = 1;
+  const alive = aliveOrDead(oldState, x, y);
+
+  if (alive) {
+    pass(`Pass: The result is ${returnState.toString()}`);
+  } else {
+    fail(`Fail: The result is ${returnState.toString()}`);
+  }
+
 });

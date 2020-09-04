@@ -10,3 +10,7 @@ const newState = (
   ];
   return expectedOutput;
 };
+
+const aliveOrDead(oldState /*: Array<Array<string>> */, x /*: number */, y /*: number */) {
+
+}
