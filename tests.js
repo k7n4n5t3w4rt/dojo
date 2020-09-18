@@ -16,18 +16,7 @@ Test("First test", () => {
 
 Test("Second test", () => {
   const inputArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
-  const outputArray = [
-    "A",
-    "B",
-    "F",
-    "G",
-    "H",
-    "C",
-    "D",
-    "E",
-    "I",
-    "J",
-  ];
+  const outputArray = ["A", "B", "F", "G", "H", "C", "D", "E", "I", "J"];
   const startIndex = 2;
   const endIndex = 4;
   const beforeIndex = 8;
