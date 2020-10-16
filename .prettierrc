@@ -1,10 +1,10 @@
 {
   "parser": "babel",
-  "tabWidth": 2,
-  "useTabs": false,
+  "tabWidth": 4,
+  "useTabs": true,
   "endOfLine": "lf",
   "htmlWhitespaceSensitivity": "css",
-  "printWidth": 80,
+  "printWidth": 120,
   "proseWrap": "preserve",
   "semi": true,
   "singleQuote": false,
